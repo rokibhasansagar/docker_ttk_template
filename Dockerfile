@@ -8,7 +8,7 @@ RUN git clone https://github.com/yash-dk/TorToolkit-Telegram -b master --depth 1
 
 WORKDIR /torapp
 
-RUN echo -e "\nlaunchpadlib" >> requirements.txt && \
+RUN printf "\nlaunchpadlib\n" >> requirements.txt && \
   pip3 install --no-cache-dir -r requirements.txt
 
 WORKDIR /tmp
